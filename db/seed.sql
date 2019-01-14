@@ -20,8 +20,8 @@ CREATE TABLE "listings" (
 	"area_sqft" varchar(10) NOT NULL,
 	"price" DECIMAL(10) NOT NULL,
 	"description" varchar(300) NOT NULL,
-	"lat" integer,
-	"long" integer
+	"lat" text,
+	"lng" text
 );
 
 

@@ -78,10 +78,10 @@ signup: async (req, res)=> {
 },
 
 addHouse: async (req, res)=> {
-    let { price, cords, beds, bath, area_sqft, description, lat, long}= req.body;
+    let { price, cords, beds, bath, area_sqft, description, lat, lng}= req.body;
     // console.log ("***CONSOLE***", req.body.address)
     const db= req.app.get('db');
-    let newHouseId= await db.make_listing([ price, cords, beds, bath, area_sqft, description, lat, long]);
+    let newHouseId= await db.make_listing([ price, cords, beds, bath, area_sqft, description, lat, lng]);
     let newHouse= await db.new_house_add([req.session.user.id, Number(newHouseId[0].id)])
     res.status(200).send(newHouse)
     // console.log(newHouse)

@@ -152,13 +152,15 @@ class Listing extends Component {
                 console.log(resGeo.data.results[0].locations[0].displayLatLng.lng)
                 
                const cords= resGeo.data.results[0].providedLocation.location
+               const lat= resGeo.data.results[0].locations[0].displayLatLng.lat
+               const lng= resGeo.data.results[0].locations[0].displayLatLng.lng
             //    const address= resGeo.data.results[0].formatted_address
         //  addMarker=()=>{
         //      var marker=L.marker(resGeo.data.results[0].locations[0].displayLatLng.lat, resGeo.data.results[0].locations[0].displayLatLng.lng).addTo()
         //  }       
                   
         
-        const res= await axios.post('/listing/add', { price, cords, beds, bath, area_sqft, description })
+        const res= await axios.post('/listing/add', { price, cords, beds, bath, area_sqft, description, lat, lng })
             
                 console.log(res)
                 this.setState({ listing: res.data })
@@ -178,7 +180,7 @@ class Listing extends Component {
 
 
     render() {
-       
+       console.log(this.props)
         let listing = this.state.listing.map((ele, i) => {
             // console.log(ele)
             return (
@@ -189,6 +191,7 @@ class Listing extends Component {
                     removeHouse={this.removeHouse} 
                     fillStateInputs={this.fillStateInputs} 
                     addFavts={this.addFavts}
+                    location={this.props.location}
                     />
 
                     {/* <button onClick={() => this.removeHouse(ele.id)}>Remove</button> */}

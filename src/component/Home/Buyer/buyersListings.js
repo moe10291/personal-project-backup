@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import List from '../Realtor/List'
-import mapper from '../Realtor/mapper'
+
 import MapContainer from '../Realtor/mapper'
 import './buyer.css'
 import { Link } from 'react-router-dom';
@@ -57,7 +57,10 @@ class BuyersListings extends Component {
             return (
                 <div>
 
-                    <List key={i} list={ele} />
+                    <List 
+                    key={i} 
+                    list={ele}
+                    location={this.props.location} />
                     <button className='addToFavts' onClick={() => this.addFavts(ele.id)}>Add to Favorites</button>
 
                 </div>
@@ -85,7 +88,8 @@ class BuyersListings extends Component {
 
                 <div className='listMap'>
                     <div className='buyerList'>{listing}</div>
-                    <div className='map'><MapContainer /></div>
+                    <div className='map'><MapContainer
+                    listings={this.state.listing} /></div>
                 </div>
 
 

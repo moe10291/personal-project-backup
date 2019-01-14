@@ -1,6 +1,6 @@
 INSERT INTO listings
 (
-price, address, beds, bath, area_sqft, description, lat, long
+price, address, beds, bath, area_sqft, description, lat, lng
 )
 VALUES(
 $1, $2, $3, $4, $5, $6, $7, $8
