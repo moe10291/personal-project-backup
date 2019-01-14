@@ -1,0 +1,2 @@
+SELECT * FROM LISTINGS 
+where id= $1

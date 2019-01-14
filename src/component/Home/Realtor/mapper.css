@@ -1,0 +1,11 @@
+.gmap{
+   width: 100%;
+   height: 95vh;
+   position: fixed;
+   margin: 0;
+   padding: 0;
+}
+
+.mapper{
+    width: 50%;
+}

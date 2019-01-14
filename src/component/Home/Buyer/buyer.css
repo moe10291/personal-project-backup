@@ -1,0 +1,38 @@
+.buyer{
+    display: flex;
+    flex-direction: column;
+   align-items: center
+}
+
+.listMap{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+}
+
+.buyerList{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 5%;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.buyerLogin{
+    display: block
+}
+
+.buyerSignup  .guest {
+    display: inline-block
+}
+
+.favts_logout{
+    
+}
+
+h1{
+    font-family: 'Laila';
+    font-size: 26px;
+}

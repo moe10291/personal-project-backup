@@ -1,0 +1,22 @@
+.box1{
+    height: 0px;
+ /* display: flex;
+ flex-direction: column; */
+ align-items: center
+ 
+}
+
+.form {
+margin-left: 3em;
+position: absolute
+
+}
+
+.form input{
+    margin-left: 3em;
+    
+}
+
+.form label{
+    position: absolute
+}
