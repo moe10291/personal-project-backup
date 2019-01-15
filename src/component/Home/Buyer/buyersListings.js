@@ -90,7 +90,7 @@ class BuyersListings extends Component {
 
 
 
-                <h1>Listings Page</h1>
+                <h1>LISTING PAGE</h1>
 
 
 
