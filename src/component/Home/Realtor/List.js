@@ -3,9 +3,9 @@ import './List.css'
 
 
 function List(props) {
-    console.log('PROPS', props)
-    // console.log(props.list)
-    // console.log(Edit)
+     ('PROPS', props)
+    //  (props.list)
+    //  (Edit)
 
     return (
 

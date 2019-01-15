@@ -46,7 +46,7 @@ class Listing extends Component {
         axios.get('/real/listing')
             .then(res => {
                 this.setState({ listing: res.data })
-                // console.log('***CONSOLE***', res.data)
+                //  ('***CONSOLE***', res.data)
             })
     }
 
@@ -71,7 +71,7 @@ class Listing extends Component {
     }
 
     removeHouse(id) {
-        console.log(id)
+         (id)
         axios.delete(`/listing/${id}`)
             .then((res) => {
                 this.setState({ listing: res.data })
@@ -137,7 +137,7 @@ class Listing extends Component {
         let { price, address, beds, bath, area_sqft, description } = this.state
   
     //  var location= address;
-    console.log(process.env.REACT_APP_GEOLOCATION_KEY)
+     (process.env.REACT_APP_GEOLOCATION_KEY)
             const resGeo= await axios.get('http://open.mapquestapi.com/geocoding/v1/address', {
                 params: {
                   location: address,
@@ -145,11 +145,11 @@ class Listing extends Component {
                   
                 }
             })
-            console.log(resGeo)    
+             (resGeo)    
                        
-                console.log(resGeo.data.results[0].providedLocation.location)
-                console.log(resGeo.data.results[0].locations[0].displayLatLng.lat)
-                console.log(resGeo.data.results[0].locations[0].displayLatLng.lng)
+                 (resGeo.data.results[0].providedLocation.location)
+                 (resGeo.data.results[0].locations[0].displayLatLng.lat)
+                 (resGeo.data.results[0].locations[0].displayLatLng.lng)
                 
                const cords= resGeo.data.results[0].providedLocation.location
                const lat= resGeo.data.results[0].locations[0].displayLatLng.lat
@@ -162,7 +162,7 @@ class Listing extends Component {
         
         const res= await axios.post('/listing/add', { price, cords, beds, bath, area_sqft, description, lat, lng })
             
-                console.log(res)
+                 (res)
                 this.setState({ listing: res.data })
 
             //     var marker = L.marker([resGeo.data.results[0].locations[0].displayLatLng.lat, resGeo.data.results[0].locations[0].displayLatLng.lng]).addTo(this.props.map);
@@ -180,9 +180,9 @@ class Listing extends Component {
 
 
     render() {
-       console.log(this.props)
+        (this.props)
         let listing = this.state.listing.map((ele, i) => {
-            // console.log(ele)
+            //  (ele)
             return (
                 <div>
                 <List 
@@ -207,7 +207,7 @@ class Listing extends Component {
         //         </div>
         //     )
         // })
-        // console.log(this.props)
+        //  (this.props)
         return (
             <div className='parentBox'>
                 <a className='atag' href='/'>

@@ -5,12 +5,12 @@ login: async (req, res)=> {
     let {username, password}= req.body
     const db= req.app.get('db');
 
-    // console.log(req.body)
+    //  (req.body)
     //letting me use massive db
     let user= await db.find_user(username);
     
     if(user[0]){
-        console.log(user[0])
+         (user[0])
         // return res.status(200).send({loggedIn: false, message: 'Username not found.'})
         let result= bcrypt.compareSync(password, user[0].password)
         if(result){
@@ -18,7 +18,7 @@ login: async (req, res)=> {
             username: user[0].username, 
             id: user[0].id
         }
-        // console.log(req.session.user)
+        //  (req.session.user)
         res.status(200).send({loggedIn: true, message: 'Login Successful'})
         } else {
             res.send({message: 'login/pass incorrect'})
@@ -27,10 +27,10 @@ login: async (req, res)=> {
     
         
 
-    // console.log(result)
+    //  (result)
 
     // if(result){
-    //     console.log(result)
+    //      (result)
     //     req.session.user={
     //         username: user[0].username, 
     //         id: user[0].id}
@@ -50,7 +50,7 @@ logout:(req, res)=> {
 
 signup: async (req, res)=> {
     let {first_name, last_name, email, username, password, phone, lisc}= req.body;
-    // console.log('**WOW**', req.body);
+    //  ('**WOW**', req.body);
     const db= req.app.get('db')
     let user= await db.find_user([username]);
     
@@ -62,10 +62,10 @@ signup: async (req, res)=> {
     } 
     else {
         let salt= bcrypt.genSaltSync(10);
-        // console.log('**CONSOLE**')
+        //  ('**CONSOLE**')
         let hashValue= bcrypt.hashSync(password, salt)
         let createdUser= await db.make_user([first_name, last_name, email, username, hashValue, phone, lisc]);
-        // console.log(createdUser);
+        //  (createdUser);
         req.session.user={
             username: createdUser[0].username,
             id: createdUser[0].id
@@ -79,29 +79,29 @@ signup: async (req, res)=> {
 
 addHouse: async (req, res)=> {
     let { price, cords, beds, bath, area_sqft, description, lat, lng}= req.body;
-    // console.log ("***CONSOLE***", req.body.address)
+    //   ("***CONSOLE***", req.body.address)
     const db= req.app.get('db');
     let allHouses= await db.make_listing([ price, cords, beds, bath, area_sqft, description, lat, lng]);
     // let newHouse= await db.new_house_add([req.session.user.id, Number(newHouseId[0].id)])
     res.status(200).send(allHouses)
-    // console.log(newHouse)
+    //  (newHouse)
  
 },
 
 
 seeList:(req, res)=> {
     const db= req.app.get('db')
-    console.log(req.session)
+     (req.session)
     db.get_List([req.session.user.id])
     .then(listing=>{
         res.status(200).send(listing)
-        // console.log(listing)
+        //  (listing)
     })
 },
 
 realList: (req, res)=> {
     const db= req.app.get('db')
-    console.log(req.session)
+     (req.session)
     db.real_get_list([req.session.user.id])
     .then(listing => {
         res.status(200).send(listing)
@@ -110,17 +110,17 @@ realList: (req, res)=> {
 
 buyersFavts: async (req, res) => {
     let {users_id}= req.body
-    console.log('**CONSOLE', req.session)
+     ('**CONSOLE', req.session)
     const db= req.app.get('db');
     let favts= await db.find_listing_by_user([req.session.user.id]);
-    // console.log(favts)
+    //  (favts)
     res.status(200).send(favts)
 
 },
 
 
 removeListing: async (req, res)=> {
-    // console.log('***CONSOLE***', req.params.id)
+    //  ('***CONSOLE***', req.params.id)
     const db= req.app.get('db')
     let newList= await db.delete_list([req.params.id]);
     res.status(200).send(newList)
@@ -130,13 +130,13 @@ removeListing: async (req, res)=> {
 removeFl: async (req, res)=> {
     // let {id}= req.session.user
     const db= req.app.get('db')
-    console.log('**SHOW THIS**',req.session.user.id, req.params.id)
+     ('**SHOW THIS**',req.session.user.id, req.params.id)
     let newBl= await db.delete_favts([req.session.user.id, req.params.id]);
     res.sendStatus(200)
 },
 
 addFavts: async (req, res)=> {
-    console.log(req.body.post, req.session.user.id)
+     (req.body.post, req.session.user.id)
     const db= req.app.get('db')
     let addFavts= await db.add_favts([req.session.user.id, req.body.post])
     res.sendStatus(200)
@@ -154,7 +154,7 @@ stateInputs: async (req, res) => {
     const db= req.app.get('db')
     let {id}= req.params;
     let rowToEdit= await db.get_listing_to_edit([id])
-    // console.log(rowToEdit)
+    //  (rowToEdit)
     res.status(200).send(rowToEdit[0])
 },
 
@@ -192,7 +192,7 @@ buyersSignup: async(req, res)=> {
     else {
         
         let salt= bcrypt.genSaltSync(10);
-        // console.log('**CONSOLE**', password, salt)
+        //  ('**CONSOLE**', password, salt)
         let hashedValue= bcrypt.hashSync(password, salt)
         let createdBuyer= await db.make_user([first_name, last_name, email, username, hashedValue, phone, lisc]);
         req.session.user={

@@ -19,7 +19,7 @@ class BuyerSignup extends Component{
         let{first_name, last_name, email, username, password, phone}= this.state
         let res= await axios.post('/buyers/signup', {first_name, last_name, email, username, password, phone});
         this.setState({first_name:"", last_name:"", email:"", username:"", password:""})
-        console.log(res.data)
+         (res.data)
         if(!res.data.loggedIn){
             this.props.history.push('/')
         }

@@ -14,19 +14,19 @@ class Favts extends Component{
     componentDidMount(){
         axios.get('/buyers/favts')
         .then(res => {
-            console.log('**SHOW', res)
+             ('**SHOW', res)
             this.setState({favts: res.data})
         })
     }
 
     async removeFl(id){
         
-        console.log('**WHATSTHIS**',id)
+         ('**WHATSTHIS**',id)
         let resp = await axios.delete(`/favts/${id}`)
         if(resp.data === 'OK'){
             axios.get('/buyers/favts')
             .then(res => {
-                console.log('**SHOW', res)
+                 ('**SHOW', res)
                 this.setState({favts: res.data})
             })
         }
@@ -37,7 +37,7 @@ class Favts extends Component{
     render(){
 
         let favorites= this.state.favts.map((ele, i, arr) => {
-            console.log(ele)
+             (ele)
             return (
                 <div className='favt-item' key={i}> 
                      <p>{ele.address}</p>

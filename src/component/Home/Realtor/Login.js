@@ -18,10 +18,10 @@ class Login extends Component {
   async login() {
     let { username, password } = this.state;
     let res = await axios.post("/auth/login", { username, password });
-    // console.log(res);
+    //  (res);
     this.setState({ username: "", password: "" });
     if (res.data.loggedIn) {
-      // console.log(res.data)
+      //  (res.data)
       this.props.history.push("/listing");
     }
     else {

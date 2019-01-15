@@ -29,7 +29,7 @@ class BuyersListings extends Component {
         axios.get('/listing')
             .then(res => {
                 this.setState({ listing: res.data })
-                console.log('***CONSOLE***', res.data)
+                 ('***CONSOLE***', res.data)
             })
     }
 
@@ -42,9 +42,9 @@ class BuyersListings extends Component {
 
     async addFavts(postid) {
         // let {user_id, listings_id}= this.state\
-        console.log(postid)
+         (postid)
         const res = await axios.post('/buyers/addFavts', { post: postid })
-        console.log(res.data)
+         (res.data)
         if (res.data === 'OK') {
             return alert('Added to Favorites')
         }
@@ -53,7 +53,7 @@ class BuyersListings extends Component {
 
     render() {
         let listing = this.state.listing.map((ele, i) => {
-            // console.log('ele',ele)
+            //  ('ele',ele)
             return (
                 <div>
 

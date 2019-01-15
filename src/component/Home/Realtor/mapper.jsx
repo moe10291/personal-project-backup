@@ -39,7 +39,7 @@ export class MapContainer extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.lat !== prevState.lat) {
-            console.log('**DIDUPDATE**', this.state)
+             ('**DIDUPDATE**', this.state)
         }
     }
 
@@ -56,7 +56,7 @@ export class MapContainer extends Component {
         })
 
         const position = [this.state.location.lat, this.state.location.lng]
-        console.log('**SHOW ME**', this.state.location.lat)
+         ('**SHOW ME**', this.state.location.lat)
         return (
             <div className='gmap'>
                 <Map

@@ -54,11 +54,11 @@ class Leaf extends Component{
 
     async addHouse() {
         let {lat, lng} = this.state.location
-        console.log(this.state.location)
+         (this.state.location)
   
         const res= await axios.post('/listing/add', { lat, lng })
             
-                console.log(res)
+                 (res)
                 this.setState({ listing: res.data })
 
     }
