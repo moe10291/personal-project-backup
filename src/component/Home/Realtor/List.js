@@ -30,7 +30,7 @@ function List(props) {
                     Description: {props.list.description}</p>
 
 
-                {props.location.pathname !== '/buyersListings' ?
+                {props.location.pathname === '/listing' ?
                     <div>
                         <button className='edit' onClick={() => props.fillStateInputs(props.list.id)}>Edit</button>
                         <button className='delete' onClick={() => props.removeHouse(props.list.id)}>Delete</button>

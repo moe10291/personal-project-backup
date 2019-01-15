@@ -54,7 +54,7 @@ class Favts extends Component{
         return (
             <div className='favts'>
             
-            <h1>Users Favt Page</h1>
+            <h1>MY FAVORITES</h1>
                 <div>
                     {favorites}
                 </div>

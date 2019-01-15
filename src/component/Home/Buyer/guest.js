@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class BuyersListings extends Component {
+class Guest extends Component {
     constructor() {
         super();
         this.state = {
@@ -61,11 +61,8 @@ class BuyersListings extends Component {
                     key={i} 
                     list={ele}
                     location={this.props.location} />
-                    {this.props.location.pathname !== '/guest' ?
-                    <button className='addToFavts' onClick={() => this.addFavts(ele.id)}>Add to Favorites</button> :
-                    ''
-                        
-                }
+                   
+
                 </div>
             )
         })
@@ -74,17 +71,11 @@ class BuyersListings extends Component {
 <link href='https://fonts.googleapis.com/css?family=Laila' rel='stylesheet'></link>
                 <div className='favts_logout'>
 
-                {this.props.location.pathname !== '/guest' ? 
-                <div>  
-                <Link to='/favts'><button>My Favorites</button></Link> 
-                <a href='/'>
+                    <Link to='/favts'><button>My Favorites</button></Link>
+
+                    <a href='/'>
                         <button className='logout' >Logout</button>
                     </a>
-                    </div>
-                : ''}
-                   
-
-                   
 
                 </div>
 
@@ -108,4 +99,4 @@ class BuyersListings extends Component {
     }
 }
 
-export default BuyersListings;
+export default Guest

@@ -1,5 +1,6 @@
 .favts{
     background-color:rgba(118, 201, 183, 0.158);
+    height: 100vh;
    
 
     
@@ -17,4 +18,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+h1{
+    font-family: 'comfortaa';
+        
 }

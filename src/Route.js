@@ -11,6 +11,7 @@ import leaflet from './component/Home/Realtor/leaflet'
 import mapper from './component/Home/Realtor/mapper';
 
 
+
 const route=(
     <Switch>
         <Route path='/' component={Login} exact/>
@@ -22,6 +23,7 @@ const route=(
         <Route path='/maps' component={maps}/>
         <Route path='/leaf' component={leaflet}/>
         <Route path='/mapper' component={mapper}/>
+        <Route path='/guest' component ={BuyersListings}/>
 
     </Switch>
 )

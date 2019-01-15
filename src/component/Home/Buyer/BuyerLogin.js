@@ -49,7 +49,7 @@ class Buyerlogin extends Component {
                     <Link to='/buyersignup'><button className='buyerSignup'>Buyer Signup</button></Link>
 
 
-                    <Link to='/buyersListings'><button className='guest'>Continue as Guest </button></Link>
+                    <Link to='/guest'><button className='guest'>Continue as Guest </button></Link>
                 </div>
                 {/* <button  onClick={<Link to='/favts'/>}>Continue as Guest</button> */}
             </div>
