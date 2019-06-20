@@ -3,7 +3,7 @@ import './List.css'
 
 
 function List(props) {
-     ('PROPS', props)
+     console.log('PROPS', props)
     //  (props.list)
     //  (Edit)
 

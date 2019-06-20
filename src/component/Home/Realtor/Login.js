@@ -40,6 +40,7 @@ class Login extends Component {
   render() {
     return (
       <div className='container'>
+        
         <div className='realtor'>
 
           <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'></link>
@@ -48,13 +49,15 @@ class Login extends Component {
           <p>
             Username:{" "}
             <input
+              className="username-input"
               onChange={e => this.handleUsername(e.target.value)}
               placeholder="Username"
             />
           </p>
           <p>
-            Password:{" "}
+             Password:{" "}
             <input
+            className="password-input"
               onChange={e => this.handlePassword(e.target.value)}
               placeholder="Password"
               type="password"

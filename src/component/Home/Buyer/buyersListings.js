@@ -42,7 +42,7 @@ class BuyersListings extends Component {
 
     async addFavts(postid) {
         // let {user_id, listings_id}= this.state\
-         (postid)
+         console.log(postid)
         const res = await axios.post('/buyers/addFavts', { post: postid })
          (res.data)
         if (res.data === 'OK') {

@@ -23,7 +23,7 @@ massive(CONNECTION_STRING)
     app.set('db', db)
     
     app.listen(PORT, () =>{
-         (`Making Progress on Port ${PORT}`)
+        console.log (`Making Progress on Port ${PORT}`)
     })
 })
 

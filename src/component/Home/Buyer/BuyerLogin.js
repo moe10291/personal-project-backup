@@ -19,8 +19,8 @@ class Buyerlogin extends Component {
         let { username, password } = this.state;
         let res = await axios.post('/buyers/login', { username, password });
         this.setState({ username: '', password: '' });
-        if (res.data.loggedIn) {
-             (this.props.history)
+        if (res.data.loggedIn){
+            console.log (this.props.history)
             this.props.history.push('/buyersListings');
         }
         else {

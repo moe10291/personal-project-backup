@@ -5,11 +5,15 @@ background-repeat: no-repeat;
 background-size: cover;
 background-color: #76c9b7
 } */
-
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url('./newnew.jpg');
+    background-image: url('./bailey-starner-1598374-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -49,18 +53,31 @@ h2{
     margin-bottom: 10px;
     padding-top: 20px;
 }
-    
-input{
-    width: 250px;
-    height: 30px;
+
+.username-input{
+    width: 12rem;
+    height: 1.5rem;
     border: 1px solid#a8aaac;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: 'Comfortaa';
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: Arial;
     padding-left: 5px;
-    background-color: rgba(234, 236, 227, 0.841);
-     
-}
+    opacity: 0.8;
+    }
+
+.password-input{
+    width: 12rem;
+    height: 1.5rem;
+    border: 1px solid#a8aaac;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: Arial;
+    padding-left: 5px;
+    opacity: 0.8;
+    margin-left: 0.4rem;
+    margin-top:0.5rem;
+    }
+    
 
 textarea{
     border: 1px solid#a8aaac;
@@ -68,13 +85,99 @@ background-color: rgba(234, 236, 227, 0.841);
 }
 
 .realtor{
-    position: absolute;
-    margin-left: 120px;
+    /* position: absolute;
+    margin-left: 120px; */
 }
-/* 
-.login{
+
+nav {
     display: flex;
-    flex-direction: row;
-    margin-left: 95px;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    padding: 1rem;
+    /* background-color: antiquewhite; */
+}
+
+.logo{
+    list-style: none;
+    float: left;
+    /* width: 20%; */
+    /* height: 300px; */
+    /* background:rgb(224, 224, 185); */
+    /* margin: 40px 40px 0px 55px; */
+}
+
+/* .nav-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
 } */
+.nav-list{
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    padding: 1.3rem;
+    /* padding-right: 5rem; */
+    padding-left: 8rem;
+    margin-left: 45rem;
+    font-family: comfortaa;
+    text-decoration: none;
+    /* line-height: 40px; */
+}
+
+
+
+.homelogo{
+    width: 14rem;
+    margin-top: 2%;
+    margin-left: 12%;
+}
+
+
+li{
+    display: inline-flex;
+    
+        text-decoration: none;
+        color: #fff;
+        font-family: Antic Slab;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0 25px;
+        list-style: none;
+    
+    }
+
+    li a {
+        text-decoration: none;
+        color: #252525;
+       
+    }
+
+    .nav-link::after{
+        content: '';
+        display: block;
+        width:0;
+        height: 1px;
+        background: black;
+        transition: width 0.5s;
+        
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        transition: width 0.5s;
+        
+    }
+
+
+
 

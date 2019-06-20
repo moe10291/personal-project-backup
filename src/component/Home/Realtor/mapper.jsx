@@ -39,7 +39,7 @@ export class MapContainer extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.lat !== prevState.lat) {
-             ('**DIDUPDATE**', this.state)
+             console.log('**DIDUPDATE**', this.state)
         }
     }
 
